@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour {
     public GameObject housePlan;
-	private void OnGUI()
+
+    private void Update()
     {
-        if(GUILayout.Button("開關平面圖"))
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
         {
             housePlan.SetActive(!housePlan.activeInHierarchy);
         }
